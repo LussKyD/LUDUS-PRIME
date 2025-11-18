@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ludus Prime — The Local Insight. The Global Standard.</title>
+  <link rel="icon" href="assets/images/logo_lp.png">
+  <meta name="description" content="Ludus Prime — Nairobi based gaming news: Kenya morning, Africa afternoon, Global evening."/>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <div id="canvas-container" aria-hidden="true"></div>
+
+  <div id="content-overlay">
+    <header class="top-header" style="pointer-events:auto;">
+      <img src="assets/images/logo_lp.png" alt="Ludus Prime logo" class="brand-logo">
+      <div class="brand-text">
+        <h1>LUDUS PRIME</h1>
+        <p class="tag">The Local Insight. The Global Standard.</p>
+      </div>
+    </header>
+
+    <nav class="mini-nav" style="pointer-events:auto;">
+      <a href="index.html">HOME</a>
+      <a href="posts/kenya-phygital-cup.html">KENYA</a>
+      <a href="#">AFRICA</a>
+      <a href="#">GLOBAL</a>
+    </nav>
+
+    <main>
+      <a href="posts/kenya-phygital-cup.html" class="hud-link">
+        <article id="kenya-panel" class="hud-panel" role="article" aria-label="Kenya report">
+          <h2>🇰🇪 THE KENYA REPORT (8:30 EAT)</h2>
+          <p class="muted">BREAKING: 82 Sports Backs Kenya Phygital Cup — Ksh 500k sponsorship and a route to international play.</p>
+          <span class="status active">[ACTIVE FEED]</span>
+        </article>
+      </a>
+
+      <a class="hud-link" href="#">
+        <article id="africa-panel" class="hud-panel" role="article" aria-label="Africa insight">
+          <h2>🌍 AFRICA INSIGHT (1:00 PM EAT)</h2>
+          <p class="muted">Mobile-first surge: Nigeria leads players, Egypt leads revenue.</p>
+          <span class="status standby">[STANDBY]</span>
+        </article>
+      </a>
+
+      <a class="hud-link" href="#">
+        <article id="global-panel" class="hud-panel" role="article" aria-label="Global prime">
+          <h2>🌐 GLOBAL PRIME (5:00 PM EAT)</h2>
+          <p class="muted">Analysis: Platform policy changes and what they mean for creators.</p>
+          <span class="status offline">[OFFLINE]</span>
+        </article>
+      </a>
+    </main>
+
+    <footer class="site-footer" style="pointer-events:auto;">
+      <p>Morning — Kenya • Afternoon — Africa • Evening — Global AAA</p>
+    </footer>
+  </div>
+
+  <!-- Use CDN for three.js so the package is lightweight; GitHub Pages can load external scripts -->
+  <script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
+  <script src="assets/js/main_scene.js"></script>
+</body>
+</html>
