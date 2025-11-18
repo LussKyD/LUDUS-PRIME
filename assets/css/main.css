@@ -1,106 +1,26 @@
-/* main.css — Ludus Prime (RESPONSIVE + readable) */
-
-/* Reset */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { height: 100%; }
 
 body {
-  font-family: Inter, Roboto, Arial, sans-serif;
-  background: #000;
-  color: #ddd;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6;
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#000;
+  color:#fff;
 }
-
-/* Canvas container sits behind interface */
-#canvas-container {
-  position: fixed;
-  inset: 0;
-  z-index: 1;
+.hero {
+  text-align:center;
+  padding:60px 20px;
 }
-
-/* Overlay content */
-#content-overlay {
-  position: relative;
-  z-index: 10;
-  pointer-events: none;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.panels {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  padding:20px;
 }
-
-/* Header */
-.top-header {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  padding: 18px 20px;
-  pointer-events: auto;
+.panel {
+  background:#111;
+  padding:20px;
+  border-radius:12px;
 }
-.brand-logo { width: 56px; height: 56px; object-fit: contain; filter: drop-shadow(0 2px 6px rgba(0,0,0,.6)); }
-.brand-text h1 { color: #FFD700; font-size: 1.4rem; letter-spacing: 1px; margin-bottom: 4px; }
-.brand-text .tag { color: #bbb; font-size: 0.85rem; margin-top: -2px; }
-
-/* mini nav */
-.mini-nav {
-  display:flex;
-  gap:12px;
-  padding: 8px 20px;
-  pointer-events: auto;
-}
-.mini-nav a { color: #FFD700; text-decoration: none; font-weight: 700; font-size: .9rem; }
-.mini-nav a:hover { color: #fff; }
-
-/* HUD panels */
-.hud-link { text-decoration:none; color: inherit; pointer-events: auto; }
-.hud-panel {
-  position: relative;
-  width: clamp(220px, 26vw, 320px);
-  background: rgba(0,0,0,0.6);
-  border: 2px solid rgba(255,215,0,0.95);
-  padding: 14px;
-  margin: 18px;
-  box-shadow: 0 6px 30px rgba(0,0,0,0.6);
-  backdrop-filter: blur(6px);
-  transition: transform .28s ease, box-shadow .28s ease;
-  pointer-events: auto;
-}
-.hud-panel:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 10px 40px rgba(0,0,0,0.8); }
-.hud-panel h2 { color: #FFD700; font-size: 1rem; margin-bottom: 6px; }
-.hud-panel .muted { color: #ccc; font-size: .92rem; }
-
-/* positions for panels on larger screens */
-#kenya-panel { position: absolute; top: 12vh; left: 5vw; z-index: 12; }
-#africa-panel { position: absolute; top: 45vh; right: 6vw; z-index: 12; transform: translateX(0); }
-#global-panel { position: absolute; bottom: 10vh; left: 5vw; z-index: 12; }
-
-/* statuses */
-.status { display:inline-block; margin-top:10px; font-weight:700; font-family:monospace; font-size:.8rem; }
-.status.active { color: #66ff66; }
-.status.standby { color: #ffaa00; }
-.status.offline { color: #ff6b6b; }
-
-/* footer */
-.site-footer { position: absolute; right: 20px; bottom: 12px; color: #888; font-size: .9rem; z-index: 12; pointer-events: auto; }
-
-/* POSTS / BLOG layout */
-.container { max-width: 900px; margin: 0 auto; padding: 100px 20px 80px; z-index: 12; position: relative; }
-.nav-bar { background:#111; border-bottom:2px solid #FFD700; padding:12px 0; position:fixed; top:0; width:100%; z-index:30; display:flex; justify-content:center; gap:12px; }
-.nav-bar a { color:#FFD700; font-weight:700; text-decoration:none; padding:6px 12px; }
-.post-header h1 { color:#FFD700; font-size:2rem; margin-bottom:6px; }
-.post-body h2 { color:#FFD700; border-left:4px solid #FFD700; padding-left:10px; margin:24px 0 12px; }
-.post-body p { margin-bottom:16px; color:#ddd; }
-
-/* key takeaway */
-.key-takeaway { background:#121212; border-left:5px solid #E5E5E5; padding:14px; margin:20px 0; }
-.key-takeaway strong { color:#66ff66; }
-
-/* responsive tweaks */
-@media (max-width: 800px) {
-  #kenya-panel, #global-panel { left: 50%; transform: translateX(-50%); width: 88%; position: static; margin: 12px auto; }
-  #africa-panel { right: 50%; transform: translateX(50%); position: static; width: 88%; margin: 12px auto; }
-  .top-header { padding: 12px; gap: 8px; }
-  .brand-text h1 { font-size: 1.1rem; }
-  .container { padding-top: 140px; }
+.feed-item {
+  padding:10px 0;
+  border-bottom:1px solid #333;
 }
